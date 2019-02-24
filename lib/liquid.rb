@@ -71,12 +71,12 @@ module Liquid
   autoload :VERSION, 'liquid/version'
 end
 
-require 'liquid/errors'
 require 'liquid/extensions'
-require 'liquid/file_system'
+require 'liquid/errors'
 require 'liquid/interrupts'
+require 'liquid/tag'
+require 'liquid/file_system'
 
 # Load all the tags of the standard library
 #
-require 'liquid/tag'
 Dir["#{__dir__}/liquid/tags/*.rb"].each { |f| require f }
